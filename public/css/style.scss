@@ -1,0 +1,136 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.clear{
+  clear: both;
+}
+
+input{
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.inputField{
+  input{
+    width: calc(100% - 20px);
+  }
+}
+
+button{
+  background-color: #32292F;
+  color: white;
+  border: 0px;
+  padding: 5px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  
+  &:hover{
+    background-color: darken(#32292F, 10%);
+  }
+}
+
+.btnType{
+  float: left;
+  padding: 5px;
+}
+
+.appNav{
+  margin-bottom: 5px;
+  
+  .appNavEntry{
+    float: left;
+    margin-right: 5px;
+    text-transform: uppercase;
+    background-color: #B4D455;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover{
+      background-color: darken(#B4D455, 10%);
+    }
+  }
+}
+
+.appHeader{
+  height: 200px;
+  width: 100%;
+  background-image: url('/img/voldemort.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  
+  .appName{
+    font-size: 48px;
+    font-weight: 900;
+    font-family: 'Covered By Your Grace', cursive;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  
+  .appSubtext{
+    padding-left: 130px;
+  }
+}
+
+.appSection{
+  padding: 10px;
+  background-color: #EEE;
+  margin-bottom: 10px;
+  overflow: auto;
+  
+  .appSectionTitle{
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Covered By Your Grace', cursive;
+  }
+  
+  .appInstruction{
+    color: #555;
+    font-style: italic;
+    padding-bottom: 10px;
+  }
+}
+#hocruxNeeded, #hocruxTotal{
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.appQuestion{
+  float: left;
+  width: 50%;
+}
+.appResult{
+  float: right;
+  width: calc(50% - 10px);
+}
+
+.outputArea, .inputArea{
+  min-height: 300px;
+  
+  input{
+    padding: 5px;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+  }
+}
+
+
+.appFooter{
+  border-top: 1px solid #BBB;
+  padding: 10px;
+  margin: 0px 10px;
+}

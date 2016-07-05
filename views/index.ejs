@@ -1,0 +1,201 @@
+<% include header %>
+
+<div class="app">
+  <div class="appHeader">
+    <div class="appName">
+      CryptoHocrux
+    </div>
+    <div class="appSubtext">
+      "Thou shall never be lost again"
+    </div>
+  </div>
+  <div class="appNav">
+    <a href="/">
+      <div class="appNavEntry">
+        Create Hocrux
+      </div>
+    </a>
+    <a href="/combine">
+      <div class="appNavEntry">
+        Combine Hocrux
+      </div>
+    </a>
+    <div class="clear"></div>
+  </div>
+  <div class="appQuestion">
+    <div class="appSection">
+      <div class="appSectionTitle">
+        About CryptoHocrux
+      </div>
+      <div class="appInstruction">
+        <ul>
+          <li>
+            Plausible Deniability
+          </li>
+          <li>
+            Distributed Storage
+          </li>
+          <li>
+            Theft Prevention
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Split-Files" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADSklEQVRoQ2NkGCaAEeSP8q45ExgZGfQHyk///zNc7CxLKaDEfrBHKrpmH1CUlbRXkpOkxCyy9N579Jzh5Zv3F+tyYw3IMgCqCe4RZ2sjexcrI0rMIkvvnmPnGI6fuzbqEVjojcYIWekIi6bRpIUWKAST1tcffxjuP/9EMAK4OFgYlCT5CKpDV0C3GLl87y1DzdyTeB3Ixc7C0JpqMbQ9QoknQKEzKGKEUk8MGo/kBesxOBvJkJwvkDUMihjh5mBhaEkhL2/APDMoPAJyDKWeGRCPgPJEVYwxw5yt1xgevPgMTyGUeIbuHkHO2KC6pWr2cap4ZvX2gwwXrt/98u/f/zPkZDZYF4BghQiqR9qWnMWoJ6jhme8/fzG0z1jOoKumwCDIz0uyP5C7AAQ9cg9aq2OrtXF5ZkKOLYOYICdBhz179RbsAU52NoJqsSlATpYEPULIBnTPOBlKM+SH0KezSVWPgDwK8wwo1gh54uyV2wxHz15hyIsPJBRGBOWp7hGYZ0ClFz4AyhOdM1cw+DpZMhjrqBJ0KCEFNPEIIUth8iDPkJsn8LWcKc4jxHgAlJzuP37OEOJpR4xyotXQNUbuPX7OMHvlNoYQDzuqJCdc7TS6xAjIM0qy1B9qokuMgJKTpJgQg5SYMNFJhVSFNPcIyBNrdhyiSXKia9IC1djPX70jmCdA9Q+hIhtfLNEsRkjJC3vPPWGYu/UaRf0Zmnlk4sL1DL5OFgQzNsgTk9ZeAgc2tboAVCm1SK3k8icfJroLAEp+X7//xtoIxRojSnJS9uQUke8/fma4fPsBQ0V6BNE1NrFdAJC66jknGJK9NBl0lTBLPwyPgOZHuDnZHUgt/kDqv//8pWKopcwd6mlPknZCnoF5AjQ42JJsTpxHSHIBmmLQ3Aq5UxK4PFMZbcwwd9t1+AjnoPcIchcAeQwAPWCHhEeI8cyQ8QjIM6/ef2dI7dmPNZUPGY8gZ2xsPhkSHiHkCZDHBr1HiPHEkPAIKF+8fP+NYOmvJMWPtXGJUSESNAmPAkrqEUrsBekd9Qi2EByNEUrT1WjSwhGCoKRFbheA0kgB9UhfvH4HXscC7lhRAijpAlBiL0zv779/jzcXJGRS7BFqOIYaZgAAQW5OYHGf3YgAAAAASUVORK5CYII=" width="50" height="50">
+      </div>
+      <div class="appSectionTitle">
+        Asset Splitting
+      </div>
+      <div class="appInstruction">
+        Select type of content to split
+      </div>
+      <div>
+        <div class="btnType">
+          <button>Private Key</button>
+        </div>
+        <div class="btnType">
+          <button>Wallet Mnemonic</button>
+        </div>
+      </div>
+    </div>
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Ignore" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFZ0lEQVRoQ+1Y308UVxT+ziBVMYVRK0o2lsXS4kNb14faNMZ2dh9qIBDoo0+lf4HgP1B9avRF7B/QwJN9KwQKqWl3hqKmtQ9iU9NiEVjpBou1LlSEhWVOc2d2t8LO7tyZHWxMPMkmm8w5937fPT/vJTznQs85frwgIDwYjUbbiaiDmcMAVCKKFPHsJ/F4vDdIr/v2gKZpYUVRLgLokAXEzDO6rjfI6svoeSagaZqaBd4ps4GDTqBe8ERA07QIEelEpPoED+EFAF3MPGoYRsrvOjk7aQKxWKyTmS+WA94BbL9pmpcMwzD8EpEioGlah6IoX/ndRMKu1zTNbj8ecSUQRNhIEBChNc7MUa8kShIQCZuN+WJlUQabtI4fEiUJxGKxswA+lUYQjOKleDzeJbtUUQLZ058OOGmlcJmm2WAYhqhWrlKUwP90+hZgZu7TdV2qzxQlEI1GxemL0eCZCzOndF3fLbOxI4HsmDAts4Cszv5qwvHGCpx8qxJ3501cGEmXNDVNU1Qk1/7gSCAWi4kkEnNOWfI06MZaZcNaV3/P4MLIKpbSXGyPc/F4XBSRkuJIIBqNGkT0gZux0/dSoDfrT86bOPPliiMJZh7Qdd11UAyEgBfQm0k8TjO6Ly9j6sFGT4hZSdd1zUrq4+iCgtM0hoJJthgB1wQuB7QTifNfp3H97nr+Uy6R+QTE/eFj8YHGCi9gxXLAMTCDBO0UfueH07hyO5P/9F063g0lm4uMBF1FQVV0JDB3YgdfU/ZB/O7X7M5Xj82J6CdH3GzOXEjiuPnA+h3glQQI9ZaNiW66hp7N9o4ExpuID+9hbN+WVX91L1D/ClC/F9hfDWyvdMMh9z29Bvy5CCQeAom/gHsPLbulVWAyRThSmw+EPhqDY2NzJHD9NYUriNGoMvbsdMBSUwXU7LRJ7ai0SQkRRJ0kC8wCu7Jmg11YBhaeFGj/vWyDX2fCe3VmAowep5PPGRYQ4Mvh8G+f/TH9aMm0dBpVE/uq5A60XK25x8DMot0vdu9ScFjNJMEIgdGPDLrpBxTMRw4E3uhP/rrarn4zg7klwmIa2LMDCKtFG065uC37yUf2XtXbgbpdjNTJMELmkxsYnT+W3SCFNRzdTMKBwOspgGqS3/+D0C9zgYDzukjyzTqE3n8ZWMncwxdTNQDET0hBLhQlILSTg0sIzSa97l+WfvJgCKG2XfYajAQ+v6Oh0qo+7QBSNIYNQ55jCGWVAbUJuDEFfHu7LFDSxq0R4O2DQGoiZzJAp+6UHCcckxioHBdhZBEQIsrc4E1gcVkaiyfF6p1A21G7TAuxCPACsBahUzMlLzaOZVRUIuClHqhNwm22iJr94xTw07T9PwgR/eSdBuDdQxt7S2piAFjtcgMvIJS8E/NIq/DEkQ1YBfhbs8DPs8D8oj8atdXAsUNA0wGHpsi3qHlI+hGhNIHhNgOE4mO1ICPCa+I+kMo2JdGccqEmQkM0PSFqlQ1YhEmpTs4YpZZBawqVERcCrT0gOi2zUGA6zJeoZaj8VwkBiK+0RLBecTMwcDILVawfpQ+Hx2VUXXPAIjHSJh5gc41Edl2/egvUPOjp4dj1aZFHWs8C9Iwet/gcNQ+53oOfPh13AnqHiuXMOIjsuXyrhDlBLUOen3FcCVhhNNzWAcJWvk6LseEjahns93o+UgTsXNjKUPIeOjmi0gSyCZ2/YHs9qRL6fdQ8KPWM6LSGJwLBe8L/yfvyQM7IygmwaHL+Eps5AVCXn5jf7AXPHnh6gWxeiK4p2ycWBHGvpbJUuJZFIO8R0bEzSidAERCr/w2AfAtMKYDHsc3s9dJhZXMsEAKym22F3gsCW3GqXtb8FyykAU9SVBUBAAAAAElFTkSuQmCC" width="48" height="48">
+      </div>
+      <div class="appSectionTitle">
+        Obscurity setting
+      </div>
+      <div class="appInstruction">
+        *In case you don't trust the server, you can obscure it on your end
+      </div>
+      <div>
+        
+      </div>
+    </div>
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Hashtag-Large" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAxElEQVRoQ+2X0Q2AIAxEZRrXcQjHcgjXcRr94UdCbbwQGsLzVw/au9pe0zL4kwaPfyGBaAVRYFgFjvW8a8Hv1/apqoqziJJLSA1ExZFAyYDKpIpDARTIDFBCRSmYbdRiKmpwWfOFBHopggK9mLbumU8Bj3G1n6s4rARWAitR/wvYyEpe2Im9/o0b/clQq8/nsxIsNK1qJ58zXwl5BKquUsXhRnGjuFHc6JsBtZuoOLqQNxei3ssbWVTA5b0kEK0ECkQr8AA8KvAxPaDkxgAAAABJRU5ErkJggg==" width="48" height="48">
+      </div>
+      <div class="appSectionTitle">
+        2 way hash setting
+      </div>
+      <div class="appInstruction">
+        This is so that in the case of MITM, your info is always sent encrypted.
+      </div>
+      <div class="inputField">
+        Password: <input type="password" id="passwordInput">
+      </div>
+      <div class="inputField">
+        Re-type Password: <input type="password" id="passwordCheck">
+      </div>
+      <div class="inputField">
+        Salt: <input type="text" id="saltInput" value="superSecretSalt">
+      </div>
+    </div>
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Elections" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADqElEQVRoQ+2YP0xTURTGv9tSyasC7dIYDNIKRXBQO7iwaBM3UGCRFAZtooOSwOLgnxBAExONCYYEJiMsUHUBVGZxIXEqMTHQFkJR46ShoKHUCte8/rP1vdd7H762kPRtzTv33O93v3PuaUuwzx+yz/WjCFBoB4sO7AsHqMdO40LVGkbdxBUYyyUklyLqqaNAgkEtBEUb6fBP5QpCBUBCAqUA4VoWX0BpCBRO0hmYzwUEl5K4A2mPCBGrKK7lcQghaiNtwZDWEFwKJAApFSIIVwoRYh5C1Kk1BNfuygCxGkngcKSimCId/jYtXeDYFcgOkICghNMMOkZcAbdWEBoBxOXsbO9s6PS6crY47a5XTQEWfVF/dZUeglFXx4TQ6HrlA5iwz4KQsyxRC77fsRCzmb47bDGw4oPE5bexcrLe8wI8ASE9rGRJADHOYKDvj1XrG7KVFHH5ufbPti9XAuqpPQfo3rIArpXvblY9bTJy6ZDbn3sh9djHAHI5G8SwMIh5g5PFKXmfF4DYZcmA2CRluHVoBmHCcRGlYeQPYNJqwtaBWQCnlI7ZW+LEiHFQlQt5A4i5wAGhtpTyChCDGLefhg6zAKmQO2q1pZR3gCREWF/mFehP2XKZM1zAqHCfq5QKAiAqezbloe5w31+ROiNgcQPCCWClC/cOPsdnfT0TomAAV2c2aWN0GikIyxXA1BwXvHoTj/V34Ss5s7cBRHXucC8ao68B2whgsACbH4EvfbEr9bvuSGEAvAsrVpDtlayDa7ky9bp96xHO/5oASq1AJIhRYQBzhhameDGgq+Zr9rhSvdlhs8n+mlOcxF7fUisoJnkBxLiq7UUY6Q9801VynXwyNxOAUqejwS7OH8mjDLAQ6AchaR0qXTyc5gDXUSsEcQAMOBrs/WoBmF+h8wYATDvqa1vVASwurQEwqSmh3brAdAAIOuprZX87yJaQXAMvBz/h5fQM1tbXUzqrO4d2qzlj3ep4d+qzuaICl1qaUGM9mplboZHlAWQa+MHQCEKhjYykuQAQNxAhbvdczwRQaGQFB6QN3PtwEJFIJCOp7+SAJg4c/5B5V5hM5bjTfeNfANlGVgKQNLBYQi9evclwIRcAovj2i83SElJoZHkAjgbW5OjVJZFtZAkAzwRWt6+G0TKNLAXgmMAaSlKXSqaRZRxgT2B1u2oYTamkkeUAmBNYQ0lqU0kmshRgbzZwElTSyNz/C6k9qnzFFwHyddJK+xQdKDrwnyfwBzhQW0ASSmgwAAAAAElFTkSuQmCC" width="48" height="48">
+      </div>
+      <div class="appSectionTitle">
+        Key Setting
+      </div>
+      <div class="appInstruction">
+        Select how you would like to split your key
+      </div>
+      <div>
+        <span>
+          <input type="number" id="hocruxNeeded" value="2" step="1" min="2" max="10">
+        </span>
+        of
+        <span>
+          <input type="number" id="hocruxTotal" value="3" step="1" min="3" max="10">
+        </span>
+      </div>
+    </div>
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Key-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC6ElEQVRoQ+2YPW/TQBjH/49NFQIqpEgUERWlBSEhMQCfAD4CCDHHnmCjlRALA0FiJ0yMTvdK8BH4CHREiiAeCii0BYZCk2AfOsduExO/nc9xLOUkL+3dPf/fPS/35AgFH1Rw/ZgD5O3BuQcK5wFmQAPhNoCb7scZPjgf4T3VsTlNqNghxAzcBeEVgNUIgR0wbJCOd9MAiQXADDRBeJxQUJM0bCRck3h6JICg+KEQhtekYz2xqgQLQgHcsHnrivkFoOl+/E/rIDyPtMVwL8twigLogFBzAXhcc4CjwQw0YkB0SMNaJKjghEAAt9oYx2qxRDp++gBWQfgcaZtBJx2tyHkCE8IAWiDUJQFskg5NQF/kkjAAXtdvjAC8IB0NgRBy7gnScCtSjcCEYIAW2H/7ERqw3YtKQR1sHCjMPvHrL4ORDCCFgOkDGE5rcBxCKcSDYZt0p/WQPuIncQrT/R46pYfZlNL4ZTQFgLmj8gRo155ZV1NsM3Fp/ItM0PJgALTNBWf15ZXB1slHeCC4lRAA70CHrYTg+GSq6A0UnF20Ub1g8V1apEEX3G5CYYzYKU0z191TsPdDBRjD4mkbK1XbsyYNIlZtFoH4vq9gd191BCvEYDMa9YI0T8QC4NaczpR3o15zF+A5HvNfuip+/1GcGdXlvyiVGMydE7Bt+RCxATy9TpMH3HF+Tnr3BMN2v4/K11215glXFIZLFy2cKg8v9MMeMoFIDBCWMuZLtX1wqFzhCXv+nIWFYfE5GllASAVwTvoNtkpl3A8ClQ0hHcDNl/FW3EcjEyITgEmnz3zdrSyI3ABkJXauADIgcgdICzE1AH9eyMqJmQEI9cTwqXLsScc7kJkCCIEIfBSYOYBACIY10tHxh2JuAIlzYtmaGEYzC+D3ROWM9bH61L5WGA94QvmN/a2rHlTK1vWlJzALB8CfZHj77n+Xzb0KhbXlSf43MzmQRPTo3DmA6MnJWjf3gKyTFN2n8B74B/iYZ0CaTXfSAAAAAElFTkSuQmCC" width="48" height="48">
+      </div>
+      <div class="appSectionTitle">
+        Key Input
+      </div>
+      <div class="appInstruction">
+        Enter your key and generate your hocrux
+      </div>
+      <div class="inputField">
+        <input type="text" id="hocruxInput">
+      </div>
+      <div>
+        <button id="submit">Generate Hocrux</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="appResult">
+    <div class="appSection">
+      <div>
+        <img class="icon icons8-Refund" src="data:image/png;base64,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" width="48" height="48">
+      </div>
+      <div class="appSectionTitle">
+        Horcrux Output
+      </div>
+      <div class="appInstruction">
+        Store these hocrux separately to safeguard your crypto-assets. <br />
+        Do remember to test if your hocrux work by combining them.
+      </div>
+      <div class="outputArea">
+        
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="appFooter">
+    <div>
+      Donate
+    </div>
+    <div>
+      ad
+    </div>
+    <div>
+      Github source
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    
+    $("#submit").click(function(){
+        $.ajax({
+          url: '/generate-hocrux',
+          type: 'POST',
+          data: {
+            hocruxInput: $("#hocruxInput").val(),
+            hocruxNeeded: $("#hocruxNeeded").val(),
+            hocruxTotal: $("#hocruxTotal").val(),
+            passwordInput: $("#passwordInput").val(),
+            saltInput: $("#saltInput").val(),
+          },
+          success: function(data){
+            $(".outputArea").html("");
+            for (var i=0; i<data.length; i++) {
+              $(".outputArea").append('<div><input value='+data[i]+'></div>');
+            }
+          },
+          error: function(data){
+            
+          }
+        });
+    })
+    
+    if( $("#passwordInput").val() == $("#passwordCheck").val() ){
+      
+    }else{
+      
+    }
+  });
+</script>
+
+<% include footer %>
